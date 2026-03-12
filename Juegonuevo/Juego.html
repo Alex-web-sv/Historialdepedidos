@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ballesta Medieval</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ===== Menu Screen ===== -->
+<div id="menuScreen">
+    <div class="menu-deco"></div>
+    <h1 class="menu-title">Ballesta Medieval</h1>
+    <p class="menu-subtitle">Destruye las fortalezas</p>
+    <div class="menu-deco"></div>
+    <button id="startBtn">Iniciar</button>
+    <button id="testerBtn" style="margin-top:12px;font-size:13px;padding:8px 18px;background:rgba(80,40,120,0.8);border:1px solid #a060ff;color:#d0b0ff;border-radius:6px;cursor:pointer;">🔧 Modo Tester</button>
+</div>
+
+<!-- ===== Map Screen ===== -->
+<div id="mapScreen">
+    <h2 class="map-header">Mapa de Niveles</h2>
+    <div id="mapGrid"></div>
+    <div class="map-nav">
+        <button id="backToMenuBtn">Volver al Menú</button>
+    </div>
+</div>
+
+<!-- ===== Game Shell ===== -->
+<div id="gameShell" style="display:none;">
+    <div class="hud">
+        <span id="levelLabel" class="hud-chip">Nivel 1</span>
+        <div class="hud-chip">Puntos: <span id="score">0</span></div>
+        <div class="hud-chip">Flechas: <span id="shots">5</span></div>
+        <div class="hud-chip">Bloques: <span id="remaining">0</span></div>
+        <div class="hud-chip">Enemigos: <span id="enemies">0</span></div>
+    </div>
+    <canvas id="game" width="1100" height="650"></canvas>
+    <div id="powerBar" class="power-bar"></div>
+    <div class="controls">
+        <button id="backToMapBtn">Mapa</button>
+        <button id="resetBtn">Reiniciar</button>
+        <span id="mechDesc"></span>
+    </div>
+    <p class="help-text">Arrastra la flecha en la ballesta y suelta para disparar</p>
+</div>
+
+<!-- ===== Win / Lose Overlay ===== -->
+<div id="overlay">
+    <div id="overlayContent"></div>
+</div>
+
+<!-- ===== Scripts ===== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/levels.js"></script>
+<script src="js/renderer.js"></script>
+<script src="js/game.js"></script>
+
+</body>
+</html>
